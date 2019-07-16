@@ -30,16 +30,13 @@ public class UserPrincipal implements UserDetails {
 
     private boolean active;
 
-    private LocalDate birthDate;
-
     private Collection<? extends GrantedAuthority> authorities;
 
-    public UserPrincipal(Long id, String name, String email, String password, LocalDate birthDate, boolean active, String photoUrl, Collection<? extends GrantedAuthority> authorities) {
+    public UserPrincipal(Long id, String name, String email, String password, boolean active, String photoUrl, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.birthDate = birthDate;
         this.photoUrl = photoUrl;
         this.active = active;
         this.authorities = authorities;
@@ -56,7 +53,6 @@ public class UserPrincipal implements UserDetails {
                 user.getName(),
                 user.getEmail(),
                 user.getPassword(),
-                user.getBirthDate(),
                 user.isActive(),
                 user.getPhotoUrl(),
             authorities

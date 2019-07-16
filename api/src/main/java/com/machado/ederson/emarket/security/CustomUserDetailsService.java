@@ -11,9 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-/*
-* Service para obter dados do usuário no contexto de autenticação
-*/
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
