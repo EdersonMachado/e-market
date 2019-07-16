@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
-public enum Perfil {
+public enum Profile {
 
     ADMINISTRATOR("ROLE_ADMIN"),
 

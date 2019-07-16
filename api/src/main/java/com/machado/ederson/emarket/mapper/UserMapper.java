@@ -1,6 +1,6 @@
 package com.machado.ederson.emarket.mapper;
 
-import com.machado.ederson.emarket.domain.Perfil;
+import com.machado.ederson.emarket.domain.Profile;
 import com.machado.ederson.emarket.domain.User;
 import com.machado.ederson.emarket.web.request.UserRequest;
 import org.springframework.stereotype.Component;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserMapper {
 
-    public User map(UserRequest request, boolean active, Perfil perfil){
+    public User map(UserRequest request, boolean active, Profile profile){
 
         User response = new User();
 
@@ -17,7 +17,7 @@ public class UserMapper {
         response.setPhotoUrl(request.getPhotoUrl());
         response.setPassword(request.getPassword());
         response.setActive(active);
-        response.setPerfil(perfil);
+        response.setProfile(profile);
 
         return response;
 

@@ -21,4 +21,5 @@ public class PublicUserController {
     public User register(@Valid @RequestBody UserRequest request){
         return registerUserService.register(request);
     }
+
 }

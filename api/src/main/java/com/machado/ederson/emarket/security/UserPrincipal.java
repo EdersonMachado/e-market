@@ -8,7 +8,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -45,7 +44,7 @@ public class UserPrincipal implements UserDetails {
     public static UserPrincipal create(User user) {
 
         List<GrantedAuthority> authorities = Arrays.asList(
-                new SimpleGrantedAuthority(user.getPerfil().getRole())
+                new SimpleGrantedAuthority(user.getProfile().getRole())
         );
 
         return new UserPrincipal(

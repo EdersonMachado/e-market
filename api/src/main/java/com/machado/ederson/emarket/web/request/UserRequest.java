@@ -23,4 +23,5 @@ public class UserRequest {
     @NotEmpty(message = "A foto é obrigatória")
     private String photoUrl;
 
+    private String administratorCredentials;
 }

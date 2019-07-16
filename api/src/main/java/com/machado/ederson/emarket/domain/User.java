@@ -25,8 +25,10 @@ public class User {
 
     private String photoUrl;
 
+    @JsonIgnore
     private boolean active;
 
-    private Perfil perfil;
+    @Enumerated(EnumType.STRING)
+    private Profile profile;
 
 }
