@@ -1,5 +1,8 @@
 package com.machado.ederson.emarket.domain;
 
+import lombok.Getter;
+
+@Getter
 public enum Type {
 
     BEVERAGES,

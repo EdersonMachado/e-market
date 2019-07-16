@@ -38,7 +38,7 @@ public class RegisterUserService {
             throw new BusinessRuleException("Senha não possui a quantidade minima de caracteres necessários");
         }
 
-        User user = mapper.mapper(request, true, Perfil.USER);
+        User user = mapper.map(request, true, Perfil.USER);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         repository.save(user);

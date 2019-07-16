@@ -2,17 +2,17 @@ package com.machado.ederson.emarket.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Data
 @Entity
+@Table(name="products")
+@SequenceGenerator(name = "SEQ", sequenceName = "SEQ_PRODUCT", allocationSize = 1)
 public class Product {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ")
     private Long id;
 
     private String name;

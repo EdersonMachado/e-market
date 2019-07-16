@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Data
 public class UserRequest {
@@ -16,6 +17,7 @@ public class UserRequest {
     private String email;
 
     @NotEmpty
+    @Size(min = 8, message = "A senha precisa ter no mínimo 8 caracteres")
     private String password;
 
     @NotEmpty(message = "A foto é obrigatória")

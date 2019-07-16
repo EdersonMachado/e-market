@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserMapper {
 
-    public User mapper(UserRequest request, boolean active, Perfil perfil){
+    public User map(UserRequest request, boolean active, Perfil perfil){
 
         User response = new User();
 
