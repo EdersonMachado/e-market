@@ -4,19 +4,19 @@ server:
     context-path: /e-market
 
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: emarket
   jpa:
-    database-platform: org.hibernate.dialect.Oracle10gDialect
     hibernate:
       ddl-auto: update
-    show-sql: true
     properties:
       hibernate:
-        format_sql: true
-  datasource:
-    url: jdbc:oracle:thin:@localhost:1521/xe
-    username: emarket
-    password: emarket
-    driver-class-name: oracle.jdbc.OracleDriver
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
 
 security:
   jwt:
