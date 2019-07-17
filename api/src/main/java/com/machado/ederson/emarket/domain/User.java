@@ -9,11 +9,11 @@ import javax.persistence.*;
 @Entity
 @Table(name="users")
 @NoArgsConstructor
-@SequenceGenerator(name = "SEQ", sequenceName = "SEQ_USER", allocationSize = 1)
+@SequenceGenerator(name = "SEQ_U", sequenceName = "SEQ_USER", allocationSize = 1)
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_U")
     private Long id;
 
     private String name;

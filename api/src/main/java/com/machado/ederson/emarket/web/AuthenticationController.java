@@ -1,7 +1,6 @@
 package com.machado.ederson.emarket.web;
 
 import com.machado.ederson.emarket.security.AuthenticationService;
-import com.machado.ederson.emarket.service.VerifyEmailService;
 import com.machado.ederson.emarket.web.request.LoginRequest;
 import com.machado.ederson.emarket.web.response.LoginResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +16,6 @@ public class AuthenticationController {
     @Autowired
     private AuthenticationService service;
 
-    @Autowired
-    private VerifyEmailService verifyEmailService;
-
     @PostMapping("/login")
     @ResponseStatus(HttpStatus.OK)
     public LoginResponse login(@RequestBody @Valid LoginRequest request) {
@@ -30,14 +26,6 @@ public class AuthenticationController {
         String token = service.authenticate(username, password);
 
         return new LoginResponse(token);
-    }
-
-    @GetMapping("/verification")
-    @ResponseStatus(HttpStatus.OK)
-    public boolean verification(@RequestParam("email") String email){
-
-        return verifyEmailService.verify(email);
-
     }
 
 }

@@ -1,7 +1,7 @@
 package com.machado.ederson.emarket.web;
 
 import com.machado.ederson.emarket.domain.User;
-import com.machado.ederson.emarket.service.RegisterUserService;
+import com.machado.ederson.emarket.service.user.RegisterUserService;
 import com.machado.ederson.emarket.web.request.UserRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

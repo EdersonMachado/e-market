@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductMapper {
 
-    public Product map(ProductRequest request){
+    public Product map(ProductRequest request, boolean active){
 
         Product response = new Product();
 
@@ -17,6 +17,7 @@ public class ProductMapper {
         response.setPrice(request.getPrice());
         response.setQuantity(request.getQuantity());
         response.setType(request.getType());
+        response.setActive(active);
 
         return response;
     }

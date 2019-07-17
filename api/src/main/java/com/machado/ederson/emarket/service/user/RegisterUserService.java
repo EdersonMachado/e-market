@@ -1,4 +1,4 @@
-package com.machado.ederson.emarket.service;
+package com.machado.ederson.emarket.service.user;
 
 import com.machado.ederson.emarket.domain.Profile;
 import com.machado.ederson.emarket.domain.User;

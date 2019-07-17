@@ -21,7 +21,7 @@ public class ProductRequest {
     private int quantity;
 
     @NotEmpty(message = "A descrição é obrigatório")
-    private int description;
+    private String description;
 
     @NotEmpty(message = "O fabricante é obrigatório")
     private String manufacturer;
