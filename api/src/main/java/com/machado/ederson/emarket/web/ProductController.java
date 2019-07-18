@@ -1,8 +1,13 @@
 package com.machado.ederson.emarket.web;
 
+import com.machado.ederson.emarket.domain.Product;
+import com.machado.ederson.emarket.domain.Type;
 import com.machado.ederson.emarket.service.product.*;
 import com.machado.ederson.emarket.web.request.ProductRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

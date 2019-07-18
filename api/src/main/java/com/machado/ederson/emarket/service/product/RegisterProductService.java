@@ -20,6 +20,8 @@ public class RegisterProductService {
 
         Product product = mapper.map(request, true);
 
+        product.setName(product.getName().toLowerCase());
+
         repository.save(product);
 
     }

@@ -15,6 +15,7 @@ public class ProductMapper {
         response.setDescription(request.getDescription());
         response.setManufacturer(request.getManufacturer());
         response.setPrice(request.getPrice());
+        response.setPhotoUrl(request.getPhotoUrl());
         response.setQuantity(request.getQuantity());
         response.setType(request.getType());
         response.setActive(active);

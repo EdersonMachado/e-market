@@ -23,6 +23,9 @@ public class ProductRequest {
     @NotEmpty(message = "A descrição é obrigatório")
     private String description;
 
+    @NotEmpty(message = "A foto é obrigatório")
+    private String photoUrl;
+
     @NotEmpty(message = "O fabricante é obrigatório")
     private String manufacturer;
 
