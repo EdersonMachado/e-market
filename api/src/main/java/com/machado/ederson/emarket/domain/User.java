@@ -4,10 +4,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
 @Table(name="users")
+@EqualsAndHashCode(of = "id")
 @NoArgsConstructor
 @SequenceGenerator(name = "SEQ_U", sequenceName = "SEQ_USER", allocationSize = 1)
 public class User {

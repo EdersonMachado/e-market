@@ -1,6 +1,7 @@
 package com.machado.ederson.emarket.domain;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -8,6 +9,7 @@ import java.math.BigDecimal;
 @Data
 @Entity
 @Table(name="products")
+@EqualsAndHashCode(of = "id")
 @SequenceGenerator(name = "SEQ_P", sequenceName = "SEQ_PRODUCT", allocationSize = 1)
 public class Product {
 
